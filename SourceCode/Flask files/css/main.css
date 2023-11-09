@@ -1,0 +1,18 @@
+.abouttext {
+  text-align: justify;
+}
+
+.webcam_img {
+  margin: 0 auto;
+}
+
+.webcam{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+.form-row {
+  margin-bottom: 15px;
+}
