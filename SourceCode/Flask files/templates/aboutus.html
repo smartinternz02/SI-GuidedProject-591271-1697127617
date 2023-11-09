@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="../static/css/main.css" rel="stylesheet" type="text/css" />
+    <title>YOLO Weapon Detection</title>
+  </head>
+  <body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">YOLO Based Weapon Detection</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navi"
+          aria-controls="navi"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navi">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="./webcam.html">WebCam</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--Navbar-->
+    <!--About-->
+    <div class="container col-xxl-8 px-4 py-5">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-12 col-lg-6">
+          <p class="lead abouttext">
+            The aim of this project is weapon detection using the YOLO (You Only
+            Look Once) object detection algorithm. The system is trained on a
+            dataset of images and videos containing weapons and will be able to
+            accurately detect the presence of new images and videos.
+          </p>
+        </div>
+        <div class="col-lg-6">
+          <img
+            src="https://images.unsplash.com/photo-1610165539750-051008c3e799"
+            class="d-block mx-lg-auto img-fluid"
+            alt="Weapon"
+            width="700"
+            height="500"
+          />
+        </div>
+      </div>
+    </div>
+    <!--About-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="../static/css/main.css" rel="stylesheet" type="text/css" />
+    <title>YOLO Weapon Detection</title>
+  </head>
+  <body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">YOLO Based Weapon Detection</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navi"
+          aria-controls="navi"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navi">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="./webcam.html">WebCam</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./aboutus.html">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--Navbar-->
+    <!--Carousel-->
+    <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+      <div class="row align-items-center g-lg-5 py-5">
+        <div class="col-lg-7 text-center text-lg-start">
+          <div
+            id="weapon-image-carousel"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#weapon-image-carousel"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#weapon-image-carousel"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#weapon-image-carousel"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+            </div>
+
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="https://images.unsplash.com/photo-1595590424283-b8f17842773f"
+                  alt="Rifle"
+                  class="d-block w-100"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://images.unsplash.com/photo-1594232352231-11a0958d131c"
+                  alt="Rifle"
+                  class="d-block w-100"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://images.unsplash.com/photo-1602432140723-b88c8b054b26"
+                  alt="Rifle"
+                  class="d-block w-100"
+                />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#weapon-image-carousel"
+              data-bs-slide="prev"
+            >
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#weapon-image-carousel"
+              data-bs-slide="next"
+            >
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+        </div>
+        <!--Carousel-->
+        <!--Upload section-->
+        <div class="col-md-10 mx-auto col-lg-5">
+          <h4>Upload Here for Weapon Detection</h4>
+          <form
+            action="/"
+            method="POST"
+            enctype="multipart/form-data"
+            name="form1"
+          >
+            <div class="form-row">
+              <input type="file" name="file_name" required />
+            </div>
+
+            <div class="form-row">
+              <button type="submit">Submit</button>
+            </div>
+          </form>
+
+          {% if input_path and video_format == "mp4" %}
+          <img
+            src="{{ url_for('serve_video', filename=input_path) }}"
+            alt="Processed Image"
+            style="width: 100%"
+          />
+          {% elif input_path %}
+          <img
+            src="{{ url_for('display', filename=input_path) }}"
+            alt="Image"
+            style="width: 100%"
+          />
+          {% endif %}
+          <!--Upload section-->
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
