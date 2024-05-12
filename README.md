@@ -1,4 +1,4 @@
-# SI-GuidedProject-591271-1697127617
+# YOLO-Weapon Detection Model
 
 Team ID : Team-593074
 
